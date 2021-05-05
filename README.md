@@ -1,3 +1,3 @@
-(https://travis-ci.com/nerlihmax/nerlihmax.github.io.svg?branch=master)
+![travis build](https://travis-ci.com/nerlihmax/nerlihmax.github.io.svg?branch=master)
 
 Привет, это мой сайт-визитка!
