@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-start m-4 border border-black
-    p-4 font-mono w-2/5">
-    <h1 class="max-w-max mb-2 text-4xl">
+    p-4 font-mono sm:text-xl w-auto sm:w-2/5">
+    <h1 class="max-w-max mb-2 text-4xl sm:text-6xl">
       {{ profile.fullName }}
     </h1>
     <div class="max-w-max">
