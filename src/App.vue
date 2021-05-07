@@ -25,7 +25,6 @@
 <script setup>
 import { reactive, provide } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import About from './views/About.vue';
 
 const router = useRouter();
 const route = useRoute();
