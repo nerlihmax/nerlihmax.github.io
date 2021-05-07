@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col justify-start m-4 border border-black
-    p-4 font-mono sm:text-xl w-auto sm:w-2/5">
+  <div class="flex flex-col justify-start mb-4 border border-black
+    p-4 font-mono sm:text-xl w-auto sm:w-4/5">
     <h1 class="max-w-max mb-2 text-4xl sm:text-6xl">
       {{ profile.fullName }}
     </h1>
@@ -14,7 +14,7 @@
       музыку и кино.
       <br/>Любимые игры: Half-life, TES V Skyrim.
       <br/>Любимая музыка: ДДТ, БИ-2, Сплин, Кино, Гражданская Оборона, Валентин Стрыкало,
-      Кипелов, Сектор Газа, Ария, Наутилус Помпилиус, КиШ, Земфира.
+      Кипелов, Сектор Газа, Ария, Наутилус Помпилиус, КиШ, Земфира, ssshhhiiittt!.
       <br/>Любимые фильмы и мульты: Убить Билла, Брат, Аватар: Легенда об
       Аанге, Футурама, Гетто, Зеленая книга, Небесный замок Лапута,
       Бесславные ублюдки Душа, Сёстры.
@@ -22,44 +22,18 @@
     <div class="flex flex-row justify-start flex-wrap align-middle">
       <div v-for="(item) in profile.links" :key="item">
         <a class="text-blue-700 mr-4"
-          :href="item.link">{{ item.name }}</a>
+          :href="item.link">
+          {{ item.name }}
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { inject } from 'vue';
 
-const profile = ref({
-  fullName: 'Максим Нерлих',
-  grade: 'junior',
-  birthday: new Date('2001-12-27'),
-  age: new Date().getUTCFullYear() - new Date('2001-12-27').getUTCFullYear() - 1,
-  roboticsExpirience: new Date().getUTCFullYear() - 2012,
-  links: [
-    {
-      name: 'Telegram',
-      link: 'https://t.me/nerlihmax',
-    },
-    {
-      name: 'VK',
-      link: 'https://vk.com/nerlihmax',
-    },
-    {
-      name: 'Github',
-      link: 'https://github.com/nerlihmax',
-    },
-    {
-      name: 'Twitch',
-      link: 'https://twitch.tv/nerlihmax',
-    },
-    {
-      name: 'Instagram',
-      link: 'https://instagram.com/nerlihmax',
-    },
-  ],
-});
+const profile = inject('profile');
 </script>
 
 <style scoped>
